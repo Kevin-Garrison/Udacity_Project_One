@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Udacity_Project_One</string>
+    <string name="login_label_email">email:</string>
+    <string name="login_field_email_hint">Enter email address</string>
+    <string name="login_banner">Please Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="login_to_account">Login To Account</string>
+    <string name="login_label_password">password:</string>
+    <string name="login_field_password_hint">Enter password</string>
+    <string name="welcome_intro_text">Place intro text here</string>
+    <string name="welcome_outtro_text">Place outtro text here</string>
+    <string name="welcome_nav_instructions">Instructions</string>
+    <string name="instructions_intro_text">Place instructions intro here</string>
+    <string name="instructions_outtro_text">Place instructions outtro text here</string>
+    <string name="instructions_nav_listings">Listings</string>
+    <string name="logout">Logout</string>
+    <string name="fab_description">Add a new item</string>
+    <string name="detail_shoe_name">Shoe Name:</string>
+    <string name="label_manufacturer">Manufacturer:</string>
+    <string name="field_manufacturer">Manufacturer</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="add_text">Add</string>
+    <string name="size_text">Size:</string>
+    <string name="description_text">Description:</string>
+    <string name="details_banner">New Item Details</string>
+</resources>
