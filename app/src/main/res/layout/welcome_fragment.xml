@@ -2,14 +2,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!-- Using a scroll view just in case the text runs a little long and needs to be scrolled to
+         be viewed completely -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:background="@color/primaryBackground"
         tools:context=".screens.welcome.WelcomeFragment">
-
+        <!-- using LinearLayout as opposed to constraints used in the instructions layout to see
+              if it can be used in a similar fashion -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

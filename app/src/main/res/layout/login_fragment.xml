@@ -2,7 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!-- using constraints for ease of aligning text and button. Would also use a Scrollview
+         if more views needed to be displayed-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_fragment"
         android:layout_width="match_parent"
@@ -39,7 +40,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_banner">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editEmail"
                 android:layout_width="match_parent"
@@ -47,7 +47,6 @@
                 android:hint="@string/hint_email_login"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/primaryEdit"/>
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -62,7 +61,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/labelEmail"
             app:passwordToggleEnabled="true">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editPassword"
                 android:layout_width="match_parent"
@@ -70,7 +68,6 @@
                 android:hint="@string/hint_password_login"
                 android:inputType="textPassword"
                 android:textColor="@color/primaryEdit"/>
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button

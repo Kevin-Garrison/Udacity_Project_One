@@ -2,14 +2,17 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!-- Using a scroll view just in case the text runs a little long and needs to be scrolled to
+         be viewed completely -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:background="@color/primaryBackground"
         tools:context=".screens.instructions.InstructionsFragment">
-
+        <!-- using constraints for ease of aligning text and button. Possible overkill,
+             could use a simpler layout for basic displaying of text and buttons like that
+             used in the welcome layout -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/instructions_fragment"
             android:layout_width="match_parent"

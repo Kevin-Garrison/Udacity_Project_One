@@ -2,13 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!-- Add a variable to access ItemData -->
     <data>
         <variable
             name="myItem"
             type="com.example.udacity_project_one.screens.listing.ItemData" />
     </data>
-
+    <!-- A ConstraintLayout is used since the view will be compact and contain several
+         textviews and an icon-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

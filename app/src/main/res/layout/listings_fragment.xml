@@ -2,23 +2,24 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Using FrameLayout since views will be added dynamically -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/primaryBackground"
         tools:context=".screens.listing.ListingsFragment">
-
+        <!-- Using ScrollView because a long list of widgets will need to be scrolled in order
+             to be viewed completely -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <!-- Using a simple LinearLayout container for the item_widget -->
             <LinearLayout
                 android:id="@+id/layoutContainerItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
         </ScrollView>
-
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"

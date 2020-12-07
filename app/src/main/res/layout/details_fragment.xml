@@ -2,9 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!-- Add a variable to access view model -->
     <data>
-
         <variable
             name="item"
             type="com.example.udacity_project_one.screens.listing.ItemData" />
@@ -13,14 +12,16 @@
             name="viewModel"
             type="com.example.udacity_project_one.screens.details.DetailsViewModel" />
     </data>
-
+    <!-- Started with a container layout, but switched to scroll view after
+         noticing the cancel button being squished at the bottom when error messages
+         were being displayed -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:background="@color/primaryBackground"
         tools:context=".screens.details.Details_Fragment">
-
+        <!-- A LinearLayout since views will be stacked on top of each other -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +42,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/layout_margin_small"
                 android:textColor="@color/primaryText">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editName"
                     android:layout_width="match_parent"
@@ -50,7 +50,6 @@
                     android:inputType="textVisiblePassword"
                     android:textColor="@color/primaryEdit"
                     android:text="@={item.name}" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -59,7 +58,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/layout_margin_small"
                 android:textColor="@color/primaryText">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editSize"
                     android:layout_width="match_parent"
@@ -68,7 +66,6 @@
                     android:inputType="textVisiblePassword"
                     android:textColor="@color/primaryEdit"
                     android:text="@={item.size}" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -77,7 +74,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/layout_margin_small"
                 android:textColor="@color/primaryText">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editCompany"
                     android:layout_width="match_parent"
@@ -86,7 +82,6 @@
                     android:inputType="textVisiblePassword"
                     android:textColor="@color/primaryEdit"
                     android:text="@={item.company}" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -95,7 +90,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/layout_margin_small"
                 android:textColor="@color/primaryText">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editDescription"
                     android:layout_width="match_parent"
@@ -104,7 +98,6 @@
                     android:inputType="textVisiblePassword"
                     android:textColor="@color/primaryEdit"
                     android:text="@={item.description}" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
