@@ -7,67 +7,48 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.udacity_project_one.screens.login.LoginFragment"
-        android:label="login_fragment"
+        android:label="@string/login_header"
         tools:layout="@layout/login_fragment">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left" />
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.udacity_project_one.screens.welcome.WelcomeFragment"
-        android:label="welcome_fragment"
-        tools:layout="@layout/welcome_fragment">
+        android:label="@string/welcome_header">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
-            app:destination="@id/instructionsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left" />
+            app:destination="@id/instructionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.example.udacity_project_one.screens.instructions.InstructionsFragment"
-        android:label="InstructionsFragment"
-        tools:layout="@layout/instructions_fragment">
+        android:label="@string/instructions_header">
         <action
             android:id="@+id/action_instructionsFragment_to_listingsFragment"
             app:destination="@id/listingsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"/>
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/listingsFragment"
         android:name="com.example.udacity_project_one.screens.listing.ListingsFragment"
-        android:label="ListingsFragment"
-        tools:layout="@layout/listings_fragment">
+        android:label="@string/listings_header">
         <action
             android:id="@+id/action_listingsFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"/>
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.udacity_project_one.screens.details.Details_Fragment"
-        android:label="Details_Fragment"
-        tools:layout="@layout/details_fragment">
-        <action
-            android:id="@+id/action_detailsFragment_to_listingsFragment"
-            app:destination="@id/listingsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"
-            app:popUpTo="@id/listingsFragment" />
-    </fragment>
+        android:label="@string/details_header" />
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/main_navigation"
+        app:popUpToInclusive="true" />
 </navigation>

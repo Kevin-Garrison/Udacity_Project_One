@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Text Size -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_x_large">24sp</dimen>
+    <!--  FAB -->
+    <dimen name="fab_margin">16dp</dimen>
+    <!--  Margins -->
+    <dimen name="text_layout_margin">12dp</dimen>
+    <dimen name="layout_margin_small">12dp</dimen>
+    <dimen name="layout_margin_medium">16dp</dimen>
+    <dimen name="layout_margin_large">20dp</dimen>
+    <dimen name="layout_margin_extralarge">24dp</dimen>
+    <!--  Images -->
+    <dimen name="max_image_height">100dp</dimen>
+    <dimen name="max_image_width">100dp</dimen>
+
     <dimen name="vertical_margin">16dp</dimen>
     <dimen name="horizontal_margin">8dp</dimen>
     <dimen name="button_padding">16dp</dimen>
@@ -10,9 +27,11 @@
     <dimen name="label_text_size">30sp</dimen>
     <dimen name="image_header_height">192dp</dimen>
     <dimen name="game_over_height">350dp</dimen>
-    <dimen name="text_size">20sp</dimen>
+
     <dimen name="small_padding">8dp</dimen>
-    <dimen name="layout_margin">16dp</dimen>
+
     <dimen name="padding">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+
+
+
 </resources>

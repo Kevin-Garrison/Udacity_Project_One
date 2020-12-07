@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="myItem"
+            type="com.example.udacity_project_one.screens.listing.ItemData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin_small"
+        android:padding="@dimen/layout_margin_small"
+        android:background="@color/primaryItem">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/content_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxHeight="@dimen/max_image_height"
+            android:maxWidth="@dimen/max_image_width"
+            app:srcCompat="@drawable/test_image" />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_small"
+            android:text="@{myItem.name}"
+            android:textColor="@color/teal_700"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Widget Name" />
+
+        <TextView
+            android:id="@+id/label_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_small"
+            android:text="@string/label_widget_size"
+            android:textColor="@color/teal_700"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_name"
+            tools:text="Size:" />
+
+        <TextView
+            android:id="@+id/text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_small"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{myItem.size}"
+            android:textColor="@color/teal_700"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintStart_toEndOf="@+id/label_size"
+            app:layout_constraintTop_toBottomOf="@+id/text_name"
+            tools:text="XXL" />
+
+        <TextView
+            android:id="@+id/label_made"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_small"
+            android:text="@string/label_widget_made"
+            android:textColor="@color/teal_700"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_size"
+            tools:text="Made By:" />
+
+        <TextView
+            android:id="@+id/text_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_small"
+            android:text="@{myItem.company}"
+            android:textColor="@color/teal_700"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintStart_toEndOf="@+id/label_made"
+            app:layout_constraintTop_toBottomOf="@+id/text_size"
+            tools:text="Widget Company" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_small"
+            android:text="@{myItem.description}"
+            android:textColor="@color/teal_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_company"
+            tools:text="The largest widget sold by Widgets Inc." />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="colorPrimary">#E3BA9B</color>
+    <color name="colorPrimaryDark">#CFA16F</color>
+    <color name="colorAccent">#C4EF9E</color>
+    <color name="white_60">#90ffffff</color>
+    <color name="white_100">#ffffff</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -8,4 +14,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black_text_color">#de000000</color>
+    <color name="primaryBackground">#E8DFDA</color>
+    <color name="primaryEdit">#014A4A</color>
+    <color name="primaryButton">#DDBFBB</color>
+    <color name="primaryText">#024948</color>
+    <color name="primaryItem">#F8DFC3</color>
 </resources>

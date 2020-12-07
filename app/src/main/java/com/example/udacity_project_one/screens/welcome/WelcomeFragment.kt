@@ -19,7 +19,7 @@ class WelcomeFragment: Fragment() {
             inflater, R.layout.welcome_fragment, container, false)
 
 
-        binding.buttonInstructions.setOnClickListener { view: View ->
+        binding.buttonContinue.setOnClickListener { view: View ->
             view.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
         }
 

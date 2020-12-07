@@ -1,26 +1,77 @@
 <resources>
-    <string name="app_name">Udacity_Project_One</string>
-    <string name="login_label_email">email:</string>
-    <string name="login_field_email_hint">Enter email address</string>
-    <string name="login_banner">Please Login</string>
-    <string name="create_account">Create Account</string>
-    <string name="login_to_account">Login To Account</string>
-    <string name="login_label_password">password:</string>
-    <string name="login_field_password_hint">Enter password</string>
-    <string name="welcome_intro_text">Place intro text here</string>
-    <string name="welcome_outtro_text">Place outtro text here</string>
-    <string name="welcome_nav_instructions">Instructions</string>
-    <string name="instructions_intro_text">Place instructions intro here</string>
-    <string name="instructions_outtro_text">Place instructions outtro text here</string>
-    <string name="instructions_nav_listings">Listings</string>
+    <!--  Global Text -->
+    <string name="app_name">The Widget Store</string>
+    <string name="login_banner">Please Login or Create a New Account</string>
+    <string name="welcome_banner">Welcome to The Widget Store!</string>
+    <string name="instructions_banner">Instructions</string>
+    <string name="details_banner">New Widget Details</string>
+    <!--  Error Empty Texts -->
+    <string name="error_email_empty">Email can not be empty</string>
+    <string name="error_password_empty">Password can not be empty</string>
+    <string name="error_name_empty">Name can not be empty</string>
+    <string name="error_size_empty">Size can not be empty</string>
+    <string name="error_company_empty">Company can not be empty</string>
+    <string name="error_description_empty">Description can not be empty</string>
+    <!--  Header Text -->
+    <string name="login_header">Login</string>
+    <string name="welcome_header">Welcome</string>
+    <string name="instructions_header">Instructions</string>
+    <string name="listings_header">Widget List</string>
+    <string name="details_header">New Widget Details</string>
+    <!--  Login Fragment Labels -->
+    <string name="label_email_login">email:</string>
+    <string name="label_password_login">password:</string>
+    <string name="label_button_create_account">Create Account</string>
+    <string name="label_button_login_account">Login To Account</string>
+    <!--  Login Fragment Hints -->
+    <string name="hint_email_login">Enter email address</string>
+    <string name="hint_password_login">Enter password</string>
+    <!--  Login Fragment Other -->
+    <string name="error_login_short">Login too short</string>
+    <!--  Welcome Fragment -->
+    <string name="welcome_intro_text">We have every kind of widget you
+        will ever need. We have big widgets, small widgets, widgets that grow, and widgets that shrink.
+        We also have widgets that expand, then contracts, and then open a portal to another dimension</string>
+    <string name="welcome_outtro_text">By continuing you agree to be in awe of the number of widgets
+        The Widget Store provides. Just click the Continue button below and hold on tight to your
+        scalp because it is about to be blown away. Good luck and God speed</string>
+    <string name="label_button_continue">Continue</string>
+    <!--  Instructions Fragment -->
+    <string name="instructions_intro_text">The instructions below will guide you through on how to
+        use this app:</string>
+    <string name="instructions_first_text">1. Click the Go To Product List button below to navigate
+        to the list of widgets.</string>
+    <string name="instructions_second_text">2. Scroll through the list of widgets that contains the
+        widget\'s name, size, manufacturer, and b brief description.</string>
+    <string name="instructions_third_text">3. Click the floating button at the bottom of the screen
+        to make a new widget entry.</string>
+    <string name="instructions_fourth_text">4. Once all of the information for the new widget has
+        been entered, click the Add New Widget button at the bottom to add it to the list (or click
+        the Cancel button at any time). </string>
+    <string name="label_button_view_widgets">Go To Product List</string>
+    <!--  Listings Fragment -->
     <string name="logout">Logout</string>
-    <string name="fab_description">Add a new item</string>
-    <string name="detail_shoe_name">Shoe Name:</string>
-    <string name="label_manufacturer">Manufacturer:</string>
-    <string name="field_manufacturer">Manufacturer</string>
-    <string name="cancel_text">Cancel</string>
-    <string name="add_text">Add</string>
-    <string name="size_text">Size:</string>
-    <string name="description_text">Description:</string>
-    <string name="details_banner">New Item Details</string>
+    <string name="content_fab">Add a new item</string>
+    <string name="content_icon">Show Icon</string>
+    <!--  Details Fragment Labels -->
+    <string name="label_widget_name">Widget Name:</string>
+    <string name="label_widget_manufacturer">Manufacturer:</string>
+    <string name="label_widget_size">Size:</string>
+    <string name="label_widget_description">Description:</string>
+    <string name="label_button_add_widget">Add New Widget</string>
+    <string name="label_button_cancel">Cancel</string>
+    <!--  Details Fragment Hints -->
+    <string name="hint_name">Name</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_company">Company</string>
+    <string name="hint_size">Size</string>
+    <string name="label_widget_made">Made By:</string>
+    <string-array name="array_sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+        <item>XX Large</item>
+        <item>XXX Large</item>
+    </string-array>
 </resources>
