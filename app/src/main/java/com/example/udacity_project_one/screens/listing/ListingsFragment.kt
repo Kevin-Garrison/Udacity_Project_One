@@ -15,6 +15,7 @@ import com.example.udacity_project_one.screens.details.Details_FragmentDirection
 
 class ListingsFragment : Fragment() {
 
+    // Create private lateinit vars for the view model and binding
     private lateinit var viewModel: ListViewModel
     private lateinit var binding: ListingsFragmentBinding
 
@@ -22,17 +23,20 @@ class ListingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Use DataBindingUtil to inflate the view
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.listings_fragment,
             container,
             false
         )
+        // Set listener for the floating action button. Navigates to the details fragment
         binding.fab.setOnClickListener(
             Navigation.createNavigateOnClickListener(
                 ListingsFragmentDirections.actionListingsFragmentToDetailsFragment()
             )
         )
+        // Has a menu for logout. Navigates back to the login fragment
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -40,11 +44,12 @@ class ListingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Create activityViewModels for the list of widgets
         viewModel = activityViewModels<ListViewModel>().value
-
+        // Observe itemList and inflate an item_widget for each widget currently in the list
         viewModel.itemList.observe(viewLifecycleOwner) {
             with(binding) {
-                layoutContainerItem.removeAllViews()
+                layoutContainerItem.removeAllViews() // Remove all item_widgets
                 for (item in it) {
                     val itemBinding = DataBindingUtil.inflate<ItemWidgetBinding>(
                         layoutInflater,
@@ -58,11 +63,13 @@ class ListingsFragment : Fragment() {
         }
     }
 
+    // Create the menu
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.navdrawer_menu, menu)
     }
 
+    // Navigate to login screen whenever logout is clicked
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.item_logout -> {

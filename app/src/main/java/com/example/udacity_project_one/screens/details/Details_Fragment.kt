@@ -21,36 +21,42 @@ import com.example.udacity_project_one.screens.listing.ListViewModel
 
 class Details_Fragment: Fragment() {
 
+    // Declare private lateinit vars for binding, view models, and nav controler
     private lateinit var binding: DetailsFragmentBinding
     private lateinit var listViewModel: ListViewModel
     private lateinit var detailsViewModel: DetailsViewModel
     private lateinit var navController: NavController
 
+    // Textwatcher object with overrides to monitor input
     private val textWatcher = object : TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-        }
+        } // Do nothing
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             detailsViewModel.validateAll()
         }
 
         override fun afterTextChanged(s: Editable?) {
-        }
+        } // Do nothing
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Use binding to inflate the view
         binding = DataBindingUtil.inflate(
             layoutInflater,
             R.layout.details_fragment,
             container,
             false
         )
-        navController = findNavController()
+        navController = findNavController() // Get the navController
 
+        // Get a view model for this fragment
         detailsViewModel = ViewModelProvider(this)[DetailsViewModel::class.java]
+
+        // Observe newItem and add it, navigate back to the list
         detailsViewModel.newItem.observe(viewLifecycleOwner) {
             listViewModel.addItem(it)
             navController.navigateUp()
@@ -63,7 +69,7 @@ class Details_Fragment: Fragment() {
             editCompany.addTextChangedListener(textWatcher)
             editDescription.addTextChangedListener(textWatcher)
 
-            // show/hide errors when input have been validate
+            // Observe validName and notify if invalid
             detailsViewModel.validName.observe(viewLifecycleOwner) {
                 textName.error = if (!it) {
                     getString(R.string.error_name_empty)
@@ -71,7 +77,7 @@ class Details_Fragment: Fragment() {
                     null
                 }
             }
-
+            // Observe validSize and notify if invalid
             detailsViewModel.validSize.observe(viewLifecycleOwner) {
                 textSize.error = if (!it) {
                     getString(R.string.error_size_empty)
@@ -79,7 +85,7 @@ class Details_Fragment: Fragment() {
                     null
                 }
             }
-
+            // Observe validCompany and notify if invalid
             detailsViewModel.validCompany.observe(viewLifecycleOwner) {
                 textCompany.error = if (!it) {
                     getString(R.string.error_company_empty)
@@ -87,7 +93,7 @@ class Details_Fragment: Fragment() {
                     null
                 }
             }
-
+            // Observe validDescription and notify if invalid
             detailsViewModel.validDescription.observe(viewLifecycleOwner) {
                 textDescription.error = if (!it) {
                     getString(R.string.error_description_empty)
@@ -103,12 +109,13 @@ class Details_Fragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Create activityViewModels for the list of widgets
         listViewModel = activityViewModels<ListViewModel>().value
-
+        //Bind it to DetailsFragmentBinding
         binding.viewModel = detailsViewModel
-
+        // Create the item the data will be saved to
         binding.item = ItemData("","","","")
-
+        // Set listener for the cancel button and have it navigate back to the list
         binding.buttonCancel.setOnClickListener {
             navController.navigateUp()
         }

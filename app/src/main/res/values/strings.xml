@@ -66,12 +66,4 @@
     <string name="hint_company">Company</string>
     <string name="hint_size">Size</string>
     <string name="label_widget_made">Made By:</string>
-    <string-array name="array_sizes">
-        <item>Small</item>
-        <item>Medium</item>
-        <item>Large</item>
-        <item>Extra Large</item>
-        <item>XX Large</item>
-        <item>XXX Large</item>
-    </string-array>
 </resources>

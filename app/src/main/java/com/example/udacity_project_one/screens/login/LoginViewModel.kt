@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 
 class LoginViewModel : ViewModel() {
 
+    // Encapsulated data that validates data entered in the login view
     private val _hasValidEmail= MutableLiveData<Boolean>()
     val hasValidEmail: LiveData<Boolean>
         get() = _hasValidEmail
@@ -29,22 +30,26 @@ class LoginViewModel : ViewModel() {
         get() = _loginPasswordText
     */
 
+    // Validate the email address entered in the login fragment
     fun testEmailValid(email: String) {
         _hasValidEmail.value = !email.isBlank()
         //_loginEmailText.value = email.toString()
         //Log.i("LoginViewModel", "email value set to $_loginEmailText.value")
     }
 
+    // Validate the password entered in the login fragment
     fun testPasswordValid(password: String) {
         _hasValidPassword.value = !password.isBlank()
         //_loginPasswordText.value = password.toString()
         //Log.i("LoginViewModel", "email value set to $_loginPasswordText")
     }
 
+    // Validate the data enetered
     fun checkPass() {
         _hasInfo.value = validate()
     }
 
+    // reset the values to true or false
     fun resetValues(bTorF: Boolean) {
         _hasInfo.value = bTorF
         _hasValidEmail.value = bTorF
@@ -53,6 +58,7 @@ class LoginViewModel : ViewModel() {
        // _loginPasswordText.value = ""
     }
 
+    // Always returns true. Can be updated for better validation methods
     private fun validate(): Boolean {
         return true
     }

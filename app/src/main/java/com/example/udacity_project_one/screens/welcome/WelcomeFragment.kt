@@ -17,12 +17,10 @@ class WelcomeFragment: Fragment() {
         // Inflate the layout for this fragment
         val binding: WelcomeFragmentBinding = DataBindingUtil.inflate(
             inflater, R.layout.welcome_fragment, container, false)
-
-
+        // Set listener for the continue button
         binding.buttonContinue.setOnClickListener { view: View ->
             view.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
         }
-
         return binding.root
     }
 }

@@ -17,15 +17,10 @@ class InstructionsFragment: Fragment() {
         // Inflate the layout for this fragment
         val binding: InstructionsFragmentBinding = DataBindingUtil.inflate(
             inflater, R.layout.instructions_fragment, container, false)
-
-        /*binding.CreateNewLoginButton.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
-        }*/
-
+        // Set listener for buttonListings. Navigates to the list fragment
         binding.buttonListings.setOnClickListener { view: View ->
             view.findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToListingsFragment())
         }
-
         return binding.root
     }
 }

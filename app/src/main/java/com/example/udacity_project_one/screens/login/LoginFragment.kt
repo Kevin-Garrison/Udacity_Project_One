@@ -58,7 +58,7 @@ class LoginFragment: Fragment() {
         viewModel.hasInfo.observe(viewLifecycleOwner, Observer { allowed ->
             if (allowed) {
                 nextNav()
-                viewModel.resetValues(false)
+                //viewModel.resetValues(false)
             }
         })
 
@@ -79,9 +79,7 @@ class LoginFragment: Fragment() {
         }
     }
 
-    /**
-     * Called when the ready for next navigation
-     */
+    //Called when the ready for next navigation
     private fun nextNav() {
         findNavController().navigate(LoginFragmentDirections
             .actionLoginFragmentToWelcomeFragment())
